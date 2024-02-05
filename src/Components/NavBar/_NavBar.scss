@@ -1,0 +1,77 @@
+.navLink_Sm {
+    transition: translate 400ms ease-in-out;
+    color: white;
+    
+    > li {
+        box-shadow: rgb(65, 65, 65) 2px 2px 20px -2px ;
+        transition: translate 500ms ease-in-out,
+                    opacity 500ms ease-in-out;
+        background-color: $base-grayColor;
+        border-bottom: 2px solid $base-greenColor;
+        opacity: 0;
+        > a {
+            display: block;
+        }
+    }
+    > span {
+        transition: translate 500ms ease-in-out,
+                    opacity 500ms ease-in-out;
+        background-color: $base-greenColor;
+        opacity: 0;
+    }
+}
+.navLink_Lg {
+    > li {
+        transition: transform 300ms;
+        border-bottom: 2px solid transparent;
+        &:hover{
+            border-bottom: 2px solid $base-greenColor;
+            transform: translateY(-15%);
+        }
+        > a {
+            display: block;
+        }
+    }
+}
+
+.pharmaLg {
+    background-color: $base-greenColor;
+}
+
+.navLink_Sm li:active {
+    color: $base-greenColor;
+    scale: 1.05;
+}
+
+.slideIn {
+    li:nth-child(1) {
+        transition-delay: 0ms;
+        translate: -100%;
+        opacity: 1;
+    }
+    li:nth-child(2) {
+        transition-delay: 10ms;
+        translate: -100%;
+        opacity: 1;
+    }
+    li:nth-child(3) {
+        transition-delay: 20ms;
+        translate: -100%;
+        opacity: 1;
+    }
+    li:nth-child(4) {
+        transition-delay: 30ms;
+        translate: -100%;
+        opacity: 1;
+    }
+    li:nth-child(5) {
+        transition-delay: 40ms;
+        translate: -100%;
+        opacity: 1;
+    }
+    span:nth-child(6) {
+        transition-delay: 50ms;
+        translate: -100%;
+        opacity: 1;
+    }
+}

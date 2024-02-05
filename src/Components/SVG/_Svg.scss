@@ -1,0 +1,49 @@
+.polyline_1 {
+    opacity: 0.4;
+    transform: translateX(100%);
+    animation: slide 2s ease-in-out 0s forwards;
+}
+.polyline_2 {
+    opacity: 0.5;
+    transform: translateX(100%);
+    animation: slide 2s ease-in-out 0.2s forwards;
+}
+
+.polyline-black_1 {
+    opacity: 0;
+    transform: translateY(0%);
+    animation: opacityText 1s ease-in-out 4.5s forwards;
+}
+.polyline-black_2 {
+    opacity: 0.5;
+    transform: translateY(100%);
+    animation: slideBlack 1s ease-in-out 3.5s forwards;
+}
+
+
+
+@keyframes slideBlack {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes opacityText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

@@ -1,0 +1,63 @@
+.home-main {
+    background-size: cover;
+    background-position: top 10% right 30%;
+    width: 100%;
+}
+
+.home-main_Green {
+    > span:nth-child(1) {
+        z-index: 50;
+        opacity: 0;
+        animation: 2s opacity-Green 2s forwards;
+    }
+    > span:nth-child(2) {
+        z-index: 50;
+        opacity: 0;
+        animation: 2s opacity-Green 2.5s forwards;
+    }
+    > span:nth-child(3) {
+        z-index: 50;
+        opacity: 0;
+        animation: 2s opacity-Green 3s forwards;
+    }
+}
+
+.home-main_Black{
+ > p:nth-child(1) {
+    opacity: 0;
+    animation: 2s opacity-Green 5.5s forwards;
+ }
+ > p:nth-child(2) {
+    opacity: 0;
+    animation: 2s opacity-Green 6s forwards;
+ }   
+ > p:nth-child(3) {
+    opacity: 0;
+    animation: 2s opacity-Green 6s forwards;
+ }
+ > button {
+    opacity: 0;
+    animation: 2s opacity-Green 7s forwards;
+ }
+}
+
+.imageContainer {
+    > img {
+        opacity: 0;
+        animation: 2s opacity-Green 7s forwards;
+    }
+}
+
+.learnButton {
+    background-color: $base-greenColor;
+    color: white;
+}
+
+@keyframes opacity-Green {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
