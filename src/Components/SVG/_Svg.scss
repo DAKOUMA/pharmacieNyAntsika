@@ -19,7 +19,47 @@
     transform: translateY(100%);
     animation: slideBlack 1s ease-in-out 3.5s forwards;
 }
+.containerSvg {
+    width: 800px;
+    height: 400px;
+}
+.containerSvg1 {
+    width: 1000px;
+    height: 400px;
+}
 
+.svgShadow {
+    box-shadow: rgb(122, 122, 122) -10px 10px 10px -5px;
+}
+
+.photoSvg {
+    transform: translateX(100%);
+    animation: slide 1s ease-in-out 0.5s forwards;
+}
+
+.svg1-polyline-1, .svg1-polyline-2 {
+    transform: translateX(100%);
+}
+.svg1-polyline-1 {
+    animation: slide 1s ease-in-out 1s forwards;
+}
+.svg1-polyline-2 {
+    animation: slide 1s ease-in-out 1.2s forwards;
+}
+
+.pharmaSvg {
+    transform: translate(-100%);
+    animation: slideBack 1s ease-in-out 1.7s forwards;
+}
+.svg2-polyline-1, .svg2-polyline-2 {
+    transform: translateX(-100%);
+}
+.svg2-polyline-1 {
+    animation: slideBack 1s ease-in-out 2s forwards;
+}
+.svg2-polyline-2 {
+    animation: slideBack 1s ease-in-out 2.2s forwards;
+}
 
 
 @keyframes slideBlack {
@@ -36,6 +76,15 @@
     }
     100% {
         opacity: 0.5;
+    }
+}
+
+@keyframes slideBack {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
     }
 }
 

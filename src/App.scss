@@ -9,7 +9,7 @@ $base-greenColor: #6ab547;
 * {
     font-size: 16px;
     font-family: 'Spartan';
-    font-weight: 300
+    font-weight: 400
 }
 
 .page {
@@ -18,6 +18,12 @@ $base-greenColor: #6ab547;
     height: 100vh;
     position: relative;
 }
+@media only screen and (min-width: 1366px) {
+    .page {
+      width: 1366px;
+      margin: 0 auto 0 auto;
+    }
+  }
 
 @import './Components/NavBar/NavBar';
 @import './Components/SVG/Svg';

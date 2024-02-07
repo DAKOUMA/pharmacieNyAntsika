@@ -53,11 +53,66 @@
     color: white;
 }
 
+.pharmaSvg-text {
+    > h1:nth-child(1) {
+        opacity: 0;
+        animation: 1s opacity-Green 2.8s forwards;
+    }
+    > h2:nth-child(2) {
+        opacity: 0;
+        animation: 1s opacity-Green 3.2s forwards;
+    }
+    > p:nth-child(3) {
+        opacity: 0;
+        animation: 1s opacity-Green 3.6s forwards;
+    }
+    > p:nth-child(4) {
+        opacity: 0;
+        animation: 1s opacity-Green 4s forwards;
+    }
+    > p:nth-child(5) {
+        opacity: 0;
+        animation: 1s opacity-Green 4.4s forwards;
+    }
+    > button:nth-child(6) {
+        opacity: 0;
+        animation: 1s opacity-Green 5.5s forwards;
+    }
+}
+
+.photo-svg-text {
+    opacity: 0;
+    animation: 1s opacity-Green 2s forwards;
+}
+
+.victorHugo {
+    opacity: 0;
+    animation: 20s opacity-Green-a 4s infinite
+}
+
+.learnMore-xl {
+    background-color: $base-grayColor;
+    opacity: 0.5;
+}
+
 @keyframes opacity-Green {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 1;
+    }
+}
+@keyframes opacity-Green-a {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;   
+    }
+
+    100% {
+        opacity: 0;
     }
 }
