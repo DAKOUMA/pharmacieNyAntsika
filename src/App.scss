@@ -1,29 +1,99 @@
 @font-face {
-    font-family: 'Spartan';
-    src: url('./assets/Fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+  font-family: 'Spartan';
+  src: url('./assets/Fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
 }
 
 $base-grayColor: #525d66;
 $base-greenColor: #6ab547;
 
 * {
-    font-size: 16px;
-    font-family: 'Spartan';
-    font-weight: 400
+  font-size: 16px;
+  font-family: 'Spartan';
+  font-weight: 400;
+  animation: inherit;
 }
 
 .page {
-    width: 100%;
-    overflow: hidden;
-    height: 100vh;
-    position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
 }
+
+.page1 {
+  overflow: hidden;
+  position: relative;
+}
+
 @media only screen and (min-width: 1366px) {
-    .page {
-      width: 1366px;
+  .page {
+    width: 1366px;
+    margin: 0 auto 0 auto;
+  }
+
+}
+
+@media only screen and (min-width: 1367px) {
+  .page1 {
+    width: 1366px;
+    margin: 0 auto 0 auto;
+  }
+}
+
+@media only screen and (min-width: 440px) {
+  .notre-pharmacie-container{
+    > img {
+
+      width: 70%;
       margin: 0 auto 0 auto;
     }
+    &_Polygone {
+
+    }
+    &_Text {
+
+    }
   }
+  .notre-equipe-container  {
+    position: relative;
+    z-index: 10;
+    transform: translateY(10%);
+    > img {
+      transform: translateY(10%);
+      width: 70%;
+      margin: 0 auto 0 auto;
+    }
+    &_Polygone {
+      transition: rotate 2s;
+      transform: translateY(0%);
+    }
+    &_Text {
+      margin-top: 30px;
+    }
+  }
+  .pharmacie-info-container {  
+    transform: translateY(10%);
+    &_Polygone {
+
+    }
+    &_Text {
+      transform: translateY(-10%);
+    }
+  }
+}
+
+
+
+@media not all and (min-width: 1000px) {
+  .pharmacie-main-xl {
+    display: none
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .pharmacie-main-sm {
+    display: none
+  }
+}
 
 @import './Components/NavBar/NavBar';
 @import './Components/SVG/Svg';
@@ -31,4 +101,5 @@ $base-greenColor: #6ab547;
 @import './Pages/Home/Home';
 @import './Pages/Partner/Partner';
 @import './Pages/Pharmacie/Pharmacie';
-@import './Pages/Product/Product'
+@import './Components/SVG/SvgPharmacie/SvgPharmacie';
+@import './Pages/Product/Product';

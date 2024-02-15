@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   return (
-    <div className='flex flex-row items-center justify-between mx-2'>
+    <div className='flex flex-row w-full relative items-center justify-between mx-2 z-20'>
       <img src={logoPharmacie} alt="" className='w-20' />
       <Toggle />
       <ul className='navLink_Lg hidden lg:flex w-1/2 justify-around mx-auto'>

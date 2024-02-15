@@ -1,0 +1,56 @@
+.pharmacieHouse{   
+    &_svg {
+        transform: translateX(100%);
+        animation: slide 2s ease-in-out 0.5s forwards;
+    }
+    &_photo {
+        transform: translateX(-100%);
+        animation: slideBack 2s ease-in-out 0.5s forwards;
+    }
+}
+
+.infirmier_svg {
+    scale: 1.03;
+    transform-origin: center;
+    animation: focus 2s ease-in-out 0.5s infinite,
+                rotateClic 1s ease-in-out infinite;
+}
+
+@media screen and (max-width: 1300px) {
+    .infirmier_svg {
+        scale: 1.5;
+    }
+}
+
+@keyframes focus {
+    0% {
+        transform: translateX(0%);
+    }
+    10% {
+        transform: translateX(0.3%)
+    }
+    30% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-0%);
+    }
+    70% {
+        transform: translateX(0%);
+    }
+    80% {
+        transform: translateX(0.3%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes rotateClick {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(180deg);
+    }
+}

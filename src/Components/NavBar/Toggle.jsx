@@ -18,7 +18,7 @@ const Toggle = (pro) => {
         <div className='lg:hidden'>
             {
                 !toggle ? (<AiOutlineAlignLeft size={'3.5rem'} fill='#525d66' onClick={handleToggle}  />)
-                : (<AiOutlineClose size={'3.5rem'} fill='#6ab547' onClick={handleToggle}/>)
+                : (<AiOutlineClose size={'3.5rem'} fill='#525d66' onClick={handleToggle}/>)
             }
             <ul className={`navLink_Sm ${slideIn} flex flex-col absolute right-0 top-20 translate-x-full text-center h-60 w-40 justify-around z-50`}>
                 <li><Link to={'/'}>ACCEUIL</Link></li>

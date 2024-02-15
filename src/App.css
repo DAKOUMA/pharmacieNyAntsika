@@ -6,6 +6,7 @@
   font-size: 16px;
   font-family: "Spartan";
   font-weight: 400;
+  animation: inherit;
 }
 
 .page {
@@ -15,10 +16,60 @@
   position: relative;
 }
 
+.page1 {
+  overflow: hidden;
+  position: relative;
+}
+
 @media only screen and (min-width: 1366px) {
   .page {
     width: 1366px;
     margin: 0 auto 0 auto;
+  }
+}
+@media only screen and (min-width: 1367px) {
+  .page1 {
+    width: 1366px;
+    margin: 0 auto 0 auto;
+  }
+}
+@media only screen and (min-width: 440px) {
+  .notre-pharmacie-container > img {
+    width: 70%;
+    margin: 0 auto 0 auto;
+  }
+  .notre-equipe-container {
+    position: relative;
+    z-index: 10;
+    transform: translateY(10%);
+  }
+  .notre-equipe-container > img {
+    transform: translateY(10%);
+    width: 70%;
+    margin: 0 auto 0 auto;
+  }
+  .notre-equipe-container_Polygone {
+    transition: rotate 2s;
+    transform: translateY(0%);
+  }
+  .notre-equipe-container_Text {
+    margin-top: 30px;
+  }
+  .pharmacie-info-container {
+    transform: translateY(10%);
+  }
+  .pharmacie-info-container_Text {
+    transform: translateY(-10%);
+  }
+}
+@media not all and (min-width: 1000px) {
+  .pharmacie-main-xl {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .pharmacie-main-sm {
+    display: none;
   }
 }
 .navLink_Sm {
@@ -283,7 +334,6 @@
 
 .learnMore-xl {
   background-color: #525d66;
-  opacity: 0.5;
 }
 
 @keyframes opacity-Green {
@@ -303,5 +353,253 @@
   }
   100% {
     opacity: 0;
+  }
+}
+.map-container {
+  height: 800px;
+}
+
+.text-pharmacie {
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  color: white;
+  font-size: 40px;
+  width: 400px;
+}
+.text-pharmacie > span {
+  font-size: 30px;
+}
+
+.nyAntsika > h1, .nyAntsika span {
+  opacity: 0;
+  animation: 2s opacity-Green 3s forwards;
+}
+
+.double-container > img {
+  transition: opacity 0.5s 0s;
+  opacity: 0;
+  position: relative;
+  z-index: -20;
+}
+.double-container > svg {
+  transition: opacity 0.5s 0.25s;
+  opacity: 0;
+}
+
+.animation-1 > img {
+  opacity: 1;
+  transition: opacity 0.5s 0.5s;
+  position: relative;
+  z-index: -20;
+}
+.animation-1 > svg {
+  opacity: 1;
+  transition: opacity 1s 0s;
+}
+
+.social-link:hover > svg {
+  transition: scale 0.3s ease-in-out, fill 0.3s ease-in-out;
+  scale: 1;
+}
+.social-link:hover > svg {
+  transition: scale 0.3s ease-in-out;
+  scale: 1.1;
+  fill: white;
+}
+
+.notre-pharmacie-container {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.notre-pharmacie-container_Polygone {
+  position: absolute;
+  z-index: 0;
+  left: -300px;
+  width: 1000px;
+  height: 500px;
+  transform: rotate(-15deg);
+}
+.notre-pharmacie-container > img, .notre-pharmacie-container_Text {
+  color: white;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.notre-pharmacie-container > img > h1, .notre-pharmacie-container_Text > h1 {
+  font-size: 1.5rem;
+}
+.notre-pharmacie-container > img > p, .notre-pharmacie-container_Text > p {
+  font-size: 1.1rem;
+  margin: 0 10px 0 10px;
+}
+
+.notre-equipe-container {
+  position: relative;
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.notre-equipe-container_Polygone {
+  z-index: 0;
+  position: absolute;
+  left: -300px;
+  width: 1000px;
+  height: 500px;
+  transform: rotate(15deg);
+}
+.notre-equipe-container > img, .notre-equipe-container_Text {
+  z-index: 10;
+  color: white;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.notre-equipe-container > img > h1, .notre-equipe-container_Text > h1 {
+  font-size: 1.5rem;
+}
+.notre-equipe-container > img > p, .notre-equipe-container_Text > p {
+  font-size: 1.1rem;
+  margin: 0 10px 0 10px;
+}
+
+.pharmacie-info-container {
+  height: 750px;
+  position: relative;
+  margin-top: 100px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.pharmacie-info-container_Polygone {
+  z-index: -50;
+  position: absolute;
+  translate: -40%;
+  top: 200px;
+  width: 1500px;
+  height: 800px;
+  background-color: #6ab547;
+  transform: rotate(-60deg);
+  transform-origin: center;
+}
+.pharmacie-info-container > img, .pharmacie-info-container_Text {
+  color: white;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.pharmacie-info-container > img > h1, .pharmacie-info-container_Text > h1 {
+  font-size: 1.5rem;
+}
+.pharmacie-info-container > img > p, .pharmacie-info-container_Text > p {
+  font-size: 1.1rem;
+  margin: 0 10px 0 10px;
+}
+
+.map-sm {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 250px;
+}
+.map-sm > .maplibregl-control-container {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .notre-pharmacie-container_Polygone {
+    transform: rotate(-90deg);
+  }
+  .notre-pharmacie-container_Text {
+    width: 48%;
+    text-align: left;
+  }
+  .notre-pharmacie-container_Text > h1 {
+    font-size: 2rem;
+  }
+  .notre-pharmacie-container_Text > p {
+    font-size: 1.3rem;
+  }
+  .notre-equipe-container {
+    margin-top: 30px;
+  }
+  .notre-equipe-container > img {
+    transform: translateY(0);
+  }
+  .notre-equipe-container_Polygone {
+    transform: rotate(0deg);
+    transform: translateY(10%);
+    left: 0;
+  }
+  .notre-equipe-container_Text {
+    transform: translateY(0);
+  }
+  .notre-equipe-container_Text > h1 {
+    font-size: 2rem;
+  }
+  .notre-equipe-container_Text > p {
+    font-size: 1.3rem;
+  }
+  .pharmacie-info-container {
+    margin: 0;
+  }
+  .pharmacie-info-container_Polygone {
+    translate: 0;
+    transform: rotate(0deg);
+  }
+}
+.pharmacieHouse_svg {
+  transform: translateX(100%);
+  animation: slide 2s ease-in-out 0.5s forwards;
+}
+.pharmacieHouse_photo {
+  transform: translateX(-100%);
+  animation: slideBack 2s ease-in-out 0.5s forwards;
+}
+
+.infirmier_svg {
+  scale: 1.03;
+  transform-origin: center;
+  animation: focus 2s ease-in-out 0.5s infinite, rotateClic 1s ease-in-out infinite;
+}
+
+@media screen and (max-width: 1300px) {
+  .infirmier_svg {
+    scale: 1.5;
+  }
+}
+@keyframes focus {
+  0% {
+    transform: translateX(0%);
+  }
+  10% {
+    transform: translateX(0.3%);
+  }
+  30% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  70% {
+    transform: translateX(0%);
+  }
+  80% {
+    transform: translateX(0.3%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes rotateClick {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(180deg);
   }
 }/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,221 @@
+.map-container {
+    height: 800px;
+}
+
+.text-pharmacie {
+    z-index: 50;
+    position: absolute;
+    top: 0;
+    color: white;
+    font-size: 40px;
+    width: 400px;
+    > span {
+        font-size: 30px;
+    }
+}
+
+.nyAntsika {
+    > h1, span {
+        opacity: 0;
+        animation: 2s opacity-Green 3s forwards;
+    }
+}
+
+.double-container {
+    > img {
+        transition: opacity 0.5s 0s;
+        opacity: 0;
+        position: relative;
+        z-index: -20;
+    }
+    > svg {
+        transition: opacity 0.5s 0.25s;
+        opacity: 0;
+    }
+}
+
+.animation-1 {
+    > img {
+        opacity: 1;
+        transition: opacity 0.5s 0.5s;
+        position: relative;
+        z-index: -20;
+    }
+    > svg {
+        opacity: 1;
+        transition: opacity 1s 0s;
+    }
+}
+
+.social-link {
+    &:hover {
+        > svg {
+            transition: scale 0.3s ease-in-out,
+            fill 0.3s ease-in-out;
+            scale: 1;
+        }
+        > svg {
+            transition: scale 0.3s ease-in-out;
+            scale: 1.1;
+            fill: white;
+        }
+    }
+}
+
+.notre-pharmacie-container {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &_Polygone {
+        position: absolute;
+        z-index: 0;
+        left: -300px;
+        width: 1000px;
+        height: 500px;
+        transform: rotate(-15deg);
+    }
+    > img, &_Text {
+        color: white;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        > h1 {
+            font-size: 1.5rem;
+        }
+        > p {
+            font-size: 1.1rem;
+            margin: 0 10px 0 10px;
+        }
+    }
+}
+
+.notre-equipe-container {
+    position: relative;
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &_Polygone {
+        z-index: 0;   
+        position: absolute;
+        left: -300px;
+        width: 1000px;
+        height: 500px;
+        transform: rotate(15deg);
+    }
+    > img, &_Text {
+        z-index: 10;
+        color: white;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        > h1 {
+            font-size: 1.5rem;
+        }
+        > p {
+            font-size: 1.1rem;
+            margin: 0 10px 0 10px;
+        }
+    }
+}
+
+.pharmacie-info-container {
+    height: 750px;
+    position: relative;
+    margin-top: 100px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    &_Polygone {
+        z-index: -50;
+        position: absolute;
+        translate: -40%;
+        top: 200px;
+        width: 1500px;
+        height: 800px;
+        background-color: $base-greenColor;
+        transform: rotate(-60deg);
+        transform-origin: center;
+    }
+    > img, &_Text {
+        color: white;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        > h1 {
+            font-size: 1.5rem;
+        }
+        > p {
+            font-size: 1.1rem;
+            margin: 0 10px 0 10px;
+        }
+    }
+}
+
+
+.map-sm {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 250px;
+    > .maplibregl-control-container {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .notre-pharmacie-container{
+      > img {
+  
+      }
+      &_Polygone {
+        transform: rotate(-90deg);
+      }
+      &_Text {
+        width: 48%;
+        text-align: left;
+        > h1 {
+            font-size: 2rem;
+        }
+        > p {
+            font-size: 1.3rem;
+        }
+      }
+    }
+    .notre-equipe-container  {
+        margin-top: 30px;
+      > img {
+        transform: translateY(0);
+      }
+      &_Polygone {
+        transform: rotate(0deg);
+        transform: translateY(10%);
+        left: 0;
+      }
+      &_Text {
+        transform: translateY(0);
+        > h1 {
+            font-size: 2rem;
+        }
+        > p {
+            font-size: 1.3rem;
+        }
+      }
+    }
+    .pharmacie-info-container {  
+        margin: 0;
+      &_Polygone {
+        translate: 0;
+        transform: rotate(0deg);
+      }
+      &_Text {
+        
+      }
+    }
+  }
+

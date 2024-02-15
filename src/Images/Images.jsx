@@ -8,3 +8,9 @@ export {default as localisation} from './localisation.png';
 export {default as logoPharmacie} from './LogoPharma.png';
 export {default as phone} from './phone.png';
 export {default as shield} from './shield.png';
+export {default as deuxFemme} from './deuxFemme.jpg';
+export {default as deuxFemmeXl} from './deuxFemme.png';
+export {default as infirmier} from './infirmier.jpg';
+export {default as infirmierXl} from './infirmier.png';
+export {default as pharmacieHouse} from './pharmacieHouse.png'
+export {default as pharmacieHouseSm} from './pharmacieHouse.jpg'
