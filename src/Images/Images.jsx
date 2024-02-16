@@ -14,3 +14,12 @@ export {default as infirmier} from './infirmier.jpg';
 export {default as infirmierXl} from './infirmier.png';
 export {default as pharmacieHouse} from './pharmacieHouse.png'
 export {default as pharmacieHouseSm} from './pharmacieHouse.jpg'
+export {default as bledina} from './bledina.png'
+export {default as cheveux} from './cheveux.jpg'
+export {default as ericFavre} from './ericFavre.png'
+export {default as laroche} from './laroche.png'
+export {default as maman} from './maman.jpg'
+export {default as noreva} from './noreva.png'
+export {default as sport} from './sport.jpg'
+export {default as topicrem} from './topicrem.png'
+export {default as vichy} from './vichy.png'

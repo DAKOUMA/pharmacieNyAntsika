@@ -1,0 +1,218 @@
+.productMain-Navbar {
+    box-shadow: $base-grayColor 0px 0px 18px -8px;
+    background-color: $base-grayColor;
+    > .product-BrandContainer {
+        display: none;
+    }
+    > .product-LinkContainer {
+        margin: 3rem auto 3rem auto;
+        padding: 2rem 0 2rem 0;
+        position: relative;
+        display: grid;
+       
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-row: 2;
+        row-gap: 2rem;
+        > li {
+            white-space: nowrap;
+            color: white;
+            background-color: $base-greenColor;
+
+            border-radius: 5px;
+            transition: scale 0.2s;
+            &:active {
+                scale: 1.1;
+            }
+            > a {
+                text-align: center;
+                font-size: 1.1rem;
+                display: block;
+                padding: 0.2rem 0.5rem 0.2rem 0.5rem; 
+            }
+        } 
+        & li:nth-child(1) {
+            grid-column: 2 / 3;
+            grid-row: 1;
+        }
+        & li:nth-child(2) {
+            grid-column: 4 / 5;
+            grid-row: 1;
+        }
+        & li:nth-child(3) {
+            grid-column: 3 / 4;
+            grid-row: 2;
+        }
+    }
+}
+
+.productMain-CardContainer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2rem;
+    > .mainCard {
+        position: relative;
+        height: fit-content;
+        overflow: hidden;
+        border-radius: 10px;
+        width: 80%;
+        margin: auto auto auto auto;
+        box-shadow: $base-grayColor 0px 0px 18px -8px;
+        transition: scale 0.2s;
+        &:active {
+            scale: 1.05;
+        }
+        > img {
+            width: 100%;
+            height: 60%;
+        }
+        >.mainCard-Text_Container {
+            background: linear-gradient(
+                180deg, $base-grayColor -20%, #d0fabc 20%, #d0fabc 100%,);
+            padding: 1rem 1rem 1rem 1rem;
+            height: max-content;
+            color: $base-grayColor;
+            > h1 {
+                                text-align: center;
+                font-size: 2rem;
+            }
+            > span {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .productMain-Navbar {
+        display: flex;
+        flex-direction: column;
+
+        box-shadow: $base-grayColor 0px 0px 18px -8px;
+
+        
+        > .product-BrandContainer {
+            display: flex;
+
+        }
+        > .product-LinkContainer {
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+            background-color: $base-greenColor;
+            > li {
+                background-color: transparent;
+                &:active {
+
+                }
+                > a {
+
+                }
+            } 
+            & li:nth-child(1) {
+
+            }
+            & li:nth-child(2) {
+
+            }
+            & li:nth-child(3) {
+
+            }
+        }
+    }
+    
+    .productMain-CardContainer {
+        // display: grid;
+        // grid-template-columns: repeat(5, 1fr);
+        // grid-template-rows: repeat(2, 1fr);
+        display: flex;
+        flex-flow: row wrap;
+        margin: 4rem 0 4rem 0;
+        > .mainCard {
+            width: 45%;
+            &:hover {
+                animation: hoverMainCard 4s infinite ease-in;
+            }
+            > img {
+                width: 100%;
+                height: 300px;
+            }
+            >.mainCard-Text_Container {
+                height: 150px;
+                text-align: center;
+                > h1 {
+                    font-size: 2.3rem;
+                    font-weight: 600;
+                }
+                > span {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+.scroller {
+
+}
+
+.scroller__inner {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    padding: 2rem 0 2rem 0;
+    gap: 6rem;
+    > li {
+        display: flex;
+        justify-items: center;
+        width: 400px;
+        list-style: none;
+        > img {
+            height: auto;
+            animation: none;
+        }
+    }
+}
+
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    mask: linear-gradient(90deg, transparent 0%, white 20%, white 80%, transparent 100%);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+
+ 
+   
+    animation: scrollAnimation 30s linear infinite;
+}
+
+
+@keyframes scrollAnimation {
+    0%{
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(calc(-50% - 3rem));
+    }
+}
+
+@keyframes hoverMainCard {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.02);
+    }
+    50% {
+        transform: scale(1.01);
+    }
+    75%{
+        transform: scale(1.04);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,9 @@
+.cardProduct {
+    transition: scale 300ms ease-in-out;
+    transform-origin: center;
+    transform:  rotateX(var(--mouseDegX)) 
+                rotateY(var(--mouseDegY))
+                translateX(var(--mousePxX))
+                translateY(var(--mousePxY));
+                
+}

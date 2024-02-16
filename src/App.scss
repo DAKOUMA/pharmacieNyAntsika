@@ -10,7 +10,7 @@ $base-greenColor: #6ab547;
   font-size: 16px;
   font-family: 'Spartan';
   font-weight: 400;
-  animation: inherit;
+  
 }
 
 .page {
@@ -103,3 +103,4 @@ $base-greenColor: #6ab547;
 @import './Pages/Pharmacie/Pharmacie';
 @import './Components/SVG/SvgPharmacie/SvgPharmacie';
 @import './Pages/Product/Product';
+@import './Pages/Product/SubProduct'
