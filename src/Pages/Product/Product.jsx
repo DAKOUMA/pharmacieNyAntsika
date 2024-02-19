@@ -2,50 +2,25 @@ import React, { useEffect, useRef } from 'react'
 import NavBar from '../../Components/NavBar/NavBar'
 import { Link } from 'react-router-dom'
 import { cheveux, maman, sport, bledina, ericFavre, vichy, topicrem, noreva, laroche } from '../../Images/Images'
+import ProductNavbar from './ProductNavbar'
+import Footer from '../../Components/SVG/Footer/Footer'
 
 const Product = () => {
-  const scrollerRef = useRef(null)
-  const scrollerInnerRef = useRef(null)
-
-  const addAnimation = () => {
-    scrollerRef.current.setAttribute("data-animated", true)
-    const scrollerContent = Array.from(scrollerInnerRef.current.children)
-    
-    scrollerContent.forEach(item => {
-      const duplicatedItem = item.cloneNode(true)
-      
-      scrollerInnerRef.current.appendChild(duplicatedItem)
-    })
-  }
-
-  useEffect(() => {
-    if (scrollerRef.current && scrollerInnerRef.current && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      addAnimation()
+  class ScrollToTopOnMount extends React.Component {
+    componentDidMount() {
+      window.scrollTo(0, 0);
     }
-  },)
+  
+    render() {
+      return null;
+    }
+  }
   return (
     <div className='page1'>
+      <ScrollToTopOnMount/>
       <NavBar />
       <main className='productMain'>
-        <div className='productMain-Navbar'>
-          <ul className="product-LinkContainer">
-            <li className="product-LinkContainer_Link"><Link to={"/product/beauty"}>Beauté & Hygiène</Link></li>
-            <li className="product-LinkContainer_Link"><Link to={"/product/baby"}>Maman & Bébé</Link></li>
-            <li className="product-LinkContainer_Link"><Link to={"/product/sport"}>Minceur & Sport</Link></li>
-          </ul>
-          <div
-            className="product-BrandContainer scroller"
-            ref={scrollerRef}>
-            <div className='scroller__inner' ref={scrollerInnerRef}>
-              <li><img className='' src={noreva} alt="" /></li>
-              <li><img className='' src={laroche} alt="" /></li>
-              <li><img className='' src={ericFavre} alt="" /></li>
-              <li><img className='' src={bledina} alt="" /></li>
-              <li><img className='' src={vichy} alt="" /></li>
-              <li><img className='' src={topicrem} alt="" /></li>
-            </div>
-          </div>
-        </div>
+        <ProductNavbar/>
         <div className="productMain-CardContainer">
           <Link to={"/product/beauty"} className='mainCard'>
             <img src={cheveux} alt="" />
@@ -70,6 +45,7 @@ const Product = () => {
           </Link>
         </div>
       </main>
+      <Footer/>
     </div>
   )
 }

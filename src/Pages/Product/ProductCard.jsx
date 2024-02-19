@@ -1,10 +1,17 @@
 import React, { useState } from 'react'
 import { useEffect, useRef } from 'react';
 
-const ProductCard = () => {
+const ProductCard = (props) => {
     const [animation, setAnimation] = useState(false);
     const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [clicked, setClicked] = useState(false)
     const productCardRef = useRef(null)
+
+    const setDelay = () => {
+        if (productCardRef.current) {
+            productCardRef.current.style.setProperty('--delay', props.delay)
+        }
+    }
 
     const handleMousePosition = (e => {
         setPosition({ x: e.clientX, y: e.clientY })
@@ -45,6 +52,11 @@ const ProductCard = () => {
         setProperies(properties)
     }
 
+    useEffect(() => {
+        if (productCardRef.current) {
+            setDelay()
+        }
+    },[])
 
     useEffect(() => {
         if (productCardRef.current && animation) {
@@ -53,15 +65,16 @@ const ProductCard = () => {
     }, [position])
     return (
         <div
-            className='cardProduct w-96 h-96 bg-red-800 mx-auto'
+            onClick={console.log(clicked)}
+            className={`cardProduct ${ animation ? 'spanProductAnimation' : ''}`}
             ref={productCardRef}
             onMouseMove={handleMousePosition}
             onMouseEnter={() => setAnimation(prevAnimation => !prevAnimation)}
             onMouseLeave={() => {setAnimation(prevAnimation => !prevAnimation)
                                 resetProperties()}}>
-            <img src={''} alt="" />
-            <h1>{'Hello'}</h1>
-            <span>{'BOB'}</span>
+            <img src={props.image} alt="" />
+            <h1 onClick={() => setClicked(!clicked)}>{props.title}</h1>
+            <span>{props.description}</span>
         </div>
     )
 }

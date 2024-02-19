@@ -1,12 +1,13 @@
 import React from 'react'
-import { logoPharmacie } from '../../Images/Images'
+import { logoPharmacie, logoPharmacieXl } from '../../Images/Images'
 import Toggle from './Toggle'
 import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   return (
-    <div className='flex flex-row w-full relative items-center justify-between mx-2 z-20'>
-      <img src={logoPharmacie} alt="" className='w-20' />
+    <div className='flex flex-row w-full right-0 top-0 backdrop-blur-3xl fixed items-center justify-between z-50'>
+      <img src={logoPharmacieXl} alt="" className='w-72' />
+
       <Toggle />
       <ul className='navLink_Lg hidden lg:flex w-1/2 justify-around mx-auto'>
         <li><Link to={'/'}>ACCEUIL</Link></li>

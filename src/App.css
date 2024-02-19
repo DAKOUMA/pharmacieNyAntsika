@@ -13,11 +13,13 @@
   overflow: hidden;
   height: 100vh;
   position: relative;
+  padding-top: 6rem;
 }
 
 .page1 {
   overflow: hidden;
   position: relative;
+  padding-top: 6rem;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -247,6 +249,30 @@
     transform: translateX(0%);
   }
 }
+.social-link1:hover > svg {
+  transition: scale 0.3s ease-in-out, fill 0.3s ease-in-out;
+  scale: 1;
+}
+.social-link1:hover > svg {
+  transition: scale 0.3s ease-in-out;
+  scale: 1.1;
+  fill: #6ab547;
+}
+
+.contact-link {
+  transition: color 0.3s;
+}
+.contact-link:hover {
+  color: #6ab547;
+}
+
+.pharmacie-contact-link {
+  transition: color 0.3s;
+}
+.pharmacie-contact-link:hover {
+  color: #525d66;
+}
+
 .home-main {
   background-size: cover;
   background-position: top 10% right 30%;
@@ -332,7 +358,13 @@
 }
 
 .learnMore-xl {
+  transition: color 0.5s;
+  transition: scale 0.5s;
   background-color: #525d66;
+}
+.learnMore-xl:hover {
+  color: #6ab547;
+  scale: 1.05;
 }
 
 @keyframes opacity-Green {
@@ -359,7 +391,7 @@
 }
 
 .text-pharmacie {
-  z-index: 50;
+  z-index: 40;
   position: absolute;
   top: 0;
   color: white;
@@ -550,6 +582,9 @@
     translate: 0;
     transform: rotate(0deg);
   }
+  .maplibregl-control-container {
+    display: none;
+  }
 }
 .pharmacieHouse_svg {
   transform: translateX(100%);
@@ -634,6 +669,10 @@
   font-size: 1.1rem;
   display: block;
   padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  transition: color 0.4s;
+}
+.productMain-Navbar > .product-LinkContainer > li > a:hover {
+  color: #525d66;
 }
 .productMain-Navbar > .product-LinkContainer li:nth-child(1) {
   grid-column: 2/3;
@@ -791,4 +830,128 @@
   transition: scale 300ms ease-in-out;
   transform-origin: center;
   transform: rotateX(var(--mouseDegX)) rotateY(var(--mouseDegY)) translateX(var(--mousePxX)) translateY(var(--mousePxY));
+}
+
+.cardProduct-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.cardProduct {
+  overflow: hidden;
+  position: relative;
+  width: 60%;
+  margin: auto;
+  box-shadow: #525d66 0px 0px 10px -3px;
+  border-radius: 1rem;
+}
+.cardProduct::active {
+  border: solid black 2px;
+}
+.cardProduct > h1 {
+  color: white;
+  background-color: #6ab547;
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: absolute;
+  padding: 0 0.5rem 0 0.5rem;
+  top: 0rem;
+  left: 0rem;
+}
+.cardProduct > span {
+  text-align: center;
+  color: white;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: #525d66;
+  padding: 8rem 0.5rem 1rem 0.5rem;
+  -webkit-mask: linear-gradient(transparent 0%, white 100%);
+          mask: linear-gradient(transparent 0%, white 100%);
+  transform: translateY(100%);
+  animation: clickAnimation 10s ease-in-out infinite var(--delay);
+}
+@keyframes clickAnimation {
+  0% {
+    transform: translateY(100%);
+  }
+  30% {
+    transform: translateY(0%);
+  }
+  70% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cardProduct-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-block: 2rem;
+    gap: 7rem;
+  }
+  .cardProduct {
+    overflow: hidden;
+    position: relative;
+    width: 90%;
+    margin: auto;
+  }
+  .cardProduct > span {
+    transition: transform 2s ease-in-out;
+  }
+  .spanProductAnimation > span {
+    transform: translateX(0%);
+  }
+  @keyframes clickAnimation {}
+}
+footer {
+  border-top: 0.3rem solid #6ab547;
+  border-bottom: 0.3rem solid #6ab547;
+  margin-top: 5rem;
+  padding: 3rem 0 3rem 0;
+  background-color: #525d66;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+footer > ul > h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+footer > ul > li {
+  font-size: 1.2rem;
+}
+footer > ul > li > a {
+  transition: color 0.5s;
+}
+footer > ul > li > a > svg {
+  transition: color 0.5s;
+}
+footer > ul > li > a:hover {
+  color: #6ab547;
+}
+
+.link-footer_Container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.link-footer {
+  width: 3rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  footer > ul {
+    width: 40%;
+  }
 }/*# sourceMappingURL=App.css.map */

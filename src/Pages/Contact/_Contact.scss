@@ -1,0 +1,27 @@
+.social-link1 {
+    &:hover {
+        > svg {
+            transition: scale 0.3s ease-in-out,
+            fill 0.3s ease-in-out;
+            scale: 1;
+        }
+        > svg {
+            transition: scale 0.3s ease-in-out;
+            scale: 1.1;
+            fill: $base-greenColor;
+        }
+    }
+}
+.contact-link {
+    transition: color 0.3s;
+    &:hover {
+        color: $base-greenColor;
+    }
+}
+
+.pharmacie-contact-link {
+    transition: color 0.3s;
+    &:hover {
+        color: $base-grayColor;
+    }
+}

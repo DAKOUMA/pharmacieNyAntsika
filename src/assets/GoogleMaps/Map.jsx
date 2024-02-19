@@ -16,7 +16,7 @@ const Map = (props) => {
   }, [])
   
   return (
-    <div ref={props.refs} className={`${props.true ? 'absolute w-1/2 bottom-0 top-0' : 'map-sm'}`}>Map</div>
+    <div id='map' ref={props.refs} className={`${props.true ? 'absolute w-1/2 bottom-0 top-0 overflow-hidden' : 'map-sm'}`}>Map</div>
   )
 }
 

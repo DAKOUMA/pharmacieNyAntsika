@@ -1,0 +1,52 @@
+footer {
+    border-top: 0.3rem solid $base-greenColor;
+    border-bottom: 0.3rem solid $base-greenColor;
+    margin-top: 5rem;
+    padding: 3rem 0 3rem 0;
+    background-color: $base-grayColor;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    > ul {
+        > h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+        > li {
+            font-size: 1.2rem;
+            > a {
+                > svg {
+                    transition: color 0.5s;
+                }
+                transition: color 0.5s;
+                &:hover {
+                    color: $base-greenColor;
+                }
+            }
+        }
+    }
+}
+
+.link-footer_Container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.link-footer {
+    width: 3rem;
+}
+
+
+
+@media only screen and (min-width: 1000px) {
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+        > ul {
+            width: 40%;
+        }
+    }
+}

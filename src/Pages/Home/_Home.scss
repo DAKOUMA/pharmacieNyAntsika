@@ -91,7 +91,13 @@
 }
 
 .learnMore-xl {
+    transition: color 0.5s;
+    transition: scale 0.5s;
     background-color: $base-grayColor;
+    &:hover {
+        color: $base-greenColor;
+        scale: 1.05;
+    }
 }
 
 @keyframes opacity-Green {

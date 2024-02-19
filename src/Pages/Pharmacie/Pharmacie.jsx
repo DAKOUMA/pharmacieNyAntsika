@@ -8,9 +8,12 @@ import { CiFacebook } from "react-icons/ci";
 import { CiMail } from "react-icons/ci";
 import { Link } from 'react-router-dom'
 import SvgAnimation from '../../Components/SVG/SvgPharmacie/SvgAnimation'
+import ScrollToTopOnMount from '../../main'
+import Footer from '../../Components/SVG/Footer/Footer'
 
 
 const Pharmacie = () => {
+
   const [userHeight, setUserHeigt] = useState(0)
   const [animation1, setAnimation1] = useState(false)
   const mapRefXl = useRef(null)
@@ -45,6 +48,7 @@ const Pharmacie = () => {
 
   return (
     <div className='page1'>
+      <ScrollToTopOnMount/>
       <NavBar />
       <div className='pharmacie-main-xl'>
         <div className='bg-red  relative'>
@@ -82,12 +86,12 @@ const Pharmacie = () => {
             <div className='flex flex-row justify-between'>
               <div className='w-80'>
                 <h2 className='text-4xl font-medium'>Adresse</h2>
-                <p className='text-xl'>Toamasina, Bazary kely Cité Procoops lot B-92 Plle 31/22</p>
+                <p className='text-xl'><Link className='pharmacie-contact-link' to={'#map'}>Toamasina, Bazary kely Cité Procoops lot B-92 Plle 31/22</Link></p>
               </div>
               <div className=' w-80 text-center'>
                 <h2 className='text-4xl font-medium'>Contact</h2>
                 <p className='text-xl'>+261 32 42 672 35 / 020 53 030 43</p>
-                <p className='text-xl'>pcie.ny.antsika@gmail.com</p>
+                <p className='text-xl'><Link className='pharmacie-contact-link' to={'mailto:pcie.ny.antsika@gmail.com'}>pcie.ny.antsika@gmail.com</Link></p>
               </div>
             </div>
             <div className='flex flex-row w-60 justify-between mx-auto mt-16'>
@@ -107,9 +111,9 @@ const Pharmacie = () => {
           gradientUrl={'gradient1'} 
           />
           <img src={pharmacieHouseSm} alt="" />
-          <div className="notre-pharmacie-container_Text">
+          <div className="notre-pharmacie-container_Text relative z-10">
             <h1>"Notre Pharmacie"</h1>
-            <p>En plein coeur de Toamasina depuis 1991 la Pharmacie Ny Antsika
+            <p className='relative z-0'>En plein coeur de Toamasina depuis 1991 la Pharmacie Ny Antsika
               a toujours priorisé la santé ainsi que la satisfaction de sa clientèle.
             </p>
           </div>
@@ -128,7 +132,7 @@ const Pharmacie = () => {
             <p>Une équipe jeune et convivial, en permanente formation afin de priorisé votre santé avant toute chose.</p>
           </div>
         </div>
-        <div className="pharmacie-info-container">
+        <div className="pharmacie-info-container relative">
           <div className="pharmacie-info-container_Polygone">
           </div>
           <Map refs={mapRefSm} true={false} />
@@ -142,21 +146,22 @@ const Pharmacie = () => {
             <div className='flex flex-row justify-between'>
               <div className=''>
                 <h2 className='font-medium'>Adresse</h2>
-                <p className=''>Toamasina, Bazary kely Cité Procoops lot B-92 Plle 31/22</p>
+                <p className=''><Link to={'#map'}>Toamasina, Bazary kely Cité Procoops lot B-92 Plle 31/22</Link></p>
               </div>
               <div className=' w-80 text-center'>
                 <h2 className=' font-medium'>Contact</h2>
                 <p className=''>+261 32 42 672 35 / 020 53 030 43</p>
-                <p className=''>pcie.ny.antsika@gmail.com</p>
+                <p className=''><Link to={'mailto:pcie.ny.antsika@gmail.com'}>pcie.ny.antsika@gmail.com</Link></p>
               </div>
             </div>
             <div className='flex flex-row w-60 justify-between mx-auto mt-16'>
-              <Link className='social-link'><CiFacebook size={"3rem"} color='#525D66' /></Link>
+              <Link className='social-link' to={'https://web.facebook.com/profile.php?id=100063959350682'}><CiFacebook size={"3rem"} color='#525D66' /></Link>
               <Link className='social-link' to={'mailto:pcie.ny.antsika@gmail.com'}><CiMail size={'3rem'} color='#525D66' /></Link>
             </div>
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

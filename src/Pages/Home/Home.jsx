@@ -10,6 +10,7 @@ import SvgBlack from '../../Components/SVG/SvgBlack'
 import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+
   const [learnMore, setLearnMore] = useState(false)
   const navigate = useNavigate()
 

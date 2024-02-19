@@ -5,5 +5,98 @@
                 rotateY(var(--mouseDegY))
                 translateX(var(--mousePxX))
                 translateY(var(--mousePxY));
-                
+}
+
+.cardProduct-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+}
+
+.cardProduct {
+    overflow: hidden;
+    position: relative;
+    width: 60%;
+    margin: auto;
+    box-shadow: $base-grayColor 0px 0px 10px -3px;
+    border-radius: 1rem;
+    &::active {
+        border: solid black 2px;
+    }
+    
+    > h1 {
+        color: white;
+        background-color: $base-greenColor;
+        font-size: 1.2rem;
+        font-weight: 600;
+        position: absolute;
+        padding: 0 0.5rem 0 0.5rem;
+        top: 0rem;
+        left: 0rem;
+    }
+    > span {
+        text-align: center;
+        color: white;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        background-color: $base-grayColor;
+        padding: 8rem 0.5rem 1rem 0.5rem;
+        mask: linear-gradient(transparent 0%, white 100%);
+        transform: translateY(100%);
+        animation: clickAnimation 10s ease-in-out infinite var(--delay);
+    }
+    > img{
+
+    }
+}
+
+@keyframes clickAnimation {
+    0% {
+        transform: translateY(100%);
+    }
+    30% {
+        transform: translateY(0%);
+    }
+    70% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(100%);
+    }    
+}
+@media only screen and (min-width: 1024px) {
+    .cardProduct-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-block: 2rem;
+        gap: 7rem;
+    
+    }
+    
+    .cardProduct {
+        overflow: hidden;
+        position: relative;
+        width: 90%;
+        margin: auto;
+        > h1 {
+
+        }
+        > span {
+           transition: transform 2s ease-in-out;
+           
+        }
+        > img{
+    
+        }
+    }
+    .spanProductAnimation {
+        > span {
+            transform: translateX(0%);
+        }
+    }
+    @keyframes clickAnimation {
+
+    }
 }

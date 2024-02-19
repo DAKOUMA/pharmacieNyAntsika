@@ -3,7 +3,7 @@
 }
 
 .text-pharmacie {
-    z-index: 50;
+    z-index: 40;
     position: absolute;
     top: 0;
     color: white;
@@ -216,6 +216,9 @@
       &_Text {
         
       }
+    }
+    .maplibregl-control-container {
+        display: none;
     }
   }
 

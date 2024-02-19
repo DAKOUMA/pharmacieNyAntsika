@@ -18,11 +18,13 @@ $base-greenColor: #6ab547;
   overflow: hidden;
   height: 100vh;
   position: relative;
+  padding-top: 6rem;
 }
 
 .page1 {
   overflow: hidden;
   position: relative;
+  padding-top: 6rem;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -103,4 +105,5 @@ $base-greenColor: #6ab547;
 @import './Pages/Pharmacie/Pharmacie';
 @import './Components/SVG/SvgPharmacie/SvgPharmacie';
 @import './Pages/Product/Product';
-@import './Pages/Product/SubProduct'
+@import './Pages/Product/SubProduct';
+@import './Components/SVG/Footer/Footer'
